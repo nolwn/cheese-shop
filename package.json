@@ -1,0 +1,20 @@
+{
+  "name": "cheese-shop",
+  "version": "1.0.0",
+  "description": "An API that tracks cheese inventory",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "author": "Nolan Hellyer",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.5",
+    "uuid": "^3.3.2"
+  }
+}
