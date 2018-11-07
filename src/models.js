@@ -15,8 +15,11 @@ function getOne(id) {
 }
 
 function create(cheese) {
-  if (!cheese.name)
-    return { error : "The cheese you entered does not have a name" };
+  const requiredProperties = ["name", "price", "weight", "rating"];
+  const missing = requiredProperties.filter((property) => !cheese[property]);
+
+  if (missing.length > 0) // not gonna lie, I'm pretty pleased with myself.
+    return { error : `The cheese you entered is missing: ${missing.join(", ")}` };
   else {
     cheese.id = uuid();
     cheeses.push(cheese);
